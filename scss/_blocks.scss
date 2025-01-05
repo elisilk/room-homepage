@@ -67,6 +67,7 @@
 @media screen and (width <= 840px) {
   .header {
     justify-content: center;
+    padding-inline: 1.5rem; /* (m) 24px -> (d) 64px */
   }
 
   [aria-controls="primary-nav"] {
@@ -213,6 +214,18 @@
   text-transform: uppercase;
 }
 
+@media screen and (width > 840px) {
+  .slide__heading {
+    font-size: 3rem; /* (m) 40px -> (d) 48px */
+    letter-spacing: -2px; /* (m) -1.67px -> (d) -2px */
+  }
+
+  .section__heading {
+    font-size: 1rem; /* (m) 14px -> (d) 16px */
+    letter-spacing: 5px; /* (m) 5.83px -> (d) 5px */
+  }
+}
+
 .slide__description,
 .section__text {
   color: var(--clr-dark-gray);
@@ -256,6 +269,7 @@
   top: 360px;
   transform: translateY(-100%);
 }
+
 @media screen and (width > 840px) {
   .slider__controls {
     top: unset;
@@ -332,11 +346,18 @@
 }
 
 .about__text {
-  padding-inline: 2rem; /* (m) 32px -> (d) ? */
+  padding-inline: 2rem; /* (m) 32px -> (d) 48px */
   padding-block: 3.0625rem; /* (m) 49px -> (d) ? */
 
   display: grid;
   gap: 0.9375rem; /* (m) 15px -> (d) 16px */
+}
+
+@media screen and (width > 840px) {
+  .about__text {
+    padding-inline: 3rem; /* (m) 32px -> (d) 48px */
+    gap: 1rem; /* (m) 15px -> (d) 16px */
+  }
 }
 
 /* ----- END ----- */

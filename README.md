@@ -45,33 +45,45 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Fluid typography and spacing
 - Accessibility
 - CUBE CSS
 - Sass
 
 ### What I learned
 
-Resources I used:
+So many cool 😎 things. Resources I used:
 
+- PageSpeed Insights and Lighthouse Scores
+  - Current solution - [PageSpeed Insights Report from Jan 5, 2025, 2:18:39 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/j2mugffcew)
+  - Initial solution - [PageSpeed Insights Report from Jan 5, 2025, 1:41:52 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/zbvq0hpzy0)
 - [Fluid typography and spacing](https://royalfig.github.io/fluid-typography-calculator/)
 - [transfonter](https://transfonter.org/) - to convert [Google Font of League Spartan](https://fonts.google.com/specimen/League+Spartan) into a woff2 compressed form.
 - [`cwebp` command-line tool](https://web.dev/articles/serve-images-webp) - to convert JPEG images to the more modern, compressed WebP format.
+- [WAVE (web accessibility evaluation tool)](https://wave.webaim.org/report#/https://elisilk.github.io/room-homepage/) - Helped identify issues with contrast and id labels.
 - [Contrast Checker](https://webaim.org/resources/contrastchecker/) - The color constrast between the Dark Gray (#A0A0A0 / hsl(0, 0%, 63%)) text color (used in the main text areas) and the white background was not sufficient to pass the Web Content Accessibility Guidelines (WCAG). So I decided to go against the design and change the text color to the lightest gray color that does pass, which is #595959 / hsl(0,
   0%,
   35%).
-- PageSpeed Insights and Lighthouse Scores
-  - Current solution - [PageSpeed Insights Report from Jan 5, 2025, 1:41:52 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/zbvq0hpzy0)
-  - Initial solution - [PageSpeed Insights Report from Jan 5, 2025, 1:41:52 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/zbvq0hpzy0)
-
-So many cool 😎 things:
+- [Accessible SVG Icons](https://css-tricks.com/accessible-svg-icons/) - Made sure to indicate when an SVG icon is stand-alone and so needs a title to communicate its purpose. Versus when it has an accompanying text label and so is only decorative.
+- [`preload`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload) - Still learning about how preloading works, how to implement it, and when it's effective, especially as relates to fonts (but also images).
+  - [Best practices for fonts](https://web.dev/articles/font-best-practices)
+  - [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets)
+  - [Preload web fonts to improve loading speed](https://web.dev/articles/codelab-preload-web-fonts)
+- [A Quick Overview of `object-fit` and `object-position`](https://css-tricks.com/on-object-fit-and-object-position/) - Still trying to master how to use `object-fit` and `object-position` so that the images are resized in ways that work as the viewport is resized and are consistent with the intent of the design.
+- [CSS-Only Carousel](https://css-tricks.com/css-only-carousel/) - I love the CSS-only carousel rather than some heavier JavaScript implementation. However, although scrolling is an option, I did use JavaScript for the buttons as an enhancement.
+  - [`scrollTo()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo)
 
 ### Continued development
 
 Specific areas that the solution should be improved (known issues):
 
-- Prevent the slider from moving to a new slide when the tab button is pressed from one of the "Shop now" links to the next?
-- Hide the horizontal scrollbars on the slider?
+- Prevent the slider from moving to a new slide when the tab button is pressed so the focus does not shift from one of the "Shop now" links to the next. A promising solution idea is to dynamically set `tabindex="-1"` for slides that are not visible in the current viewport.
+  - [Control focus with tabindex](https://web.dev/articles/control-focus-with-tabindex)
+  - [Can I dynamically set tabindex in JavaScript?](https://stackoverflow.com/questions/3772438/can-i-dynamically-set-tabindex-in-javascript)
+  - [Element: `getBoundingClientRect()` method](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+  - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+  - [The Intersection Observer API explained](https://pawelgrzybek.com/the-intersection-observer-api-explained/)
+  - [How can I tell if a DOM element is visible in the current viewport?](https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport)
+- Hide the horizontal scrollbars on the slider.
   - [Using CSS to hide scrollbars without impacting scrolling](https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/)
 
 More general ideas I want to consider:
@@ -83,7 +95,7 @@ Hmm 🤔 ...
 - [Kevin Powell on YouTube](https://www.youtube.com/@KevinPowell) - He's the best.
 - [Accessibility Developer Guide](https://www.accessibility-developer-guide.com/)
 - [MDN Web Docs for CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Went here a lot to reference the different CSS properties and the shorthands, and all the great explanations about best practices.
-- [The Clamp Calculator](https://royalfig.github.io/fluid-typography-calculator/) - Used for all of fluid typography and fluid spacing calculations.
+- [The Clamp Calculator](https://royalfig.github.io/fluid-typography-calculator/) - Used for all of fluid typography and fluid spacing calculations. I didn't end up using it in this solution, but it's always there when I need it.
 
 ## Author
 
