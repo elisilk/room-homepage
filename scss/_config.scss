@@ -1,0 +1,70 @@
+/* ----- CONFIG ----- */
+
+@use "sass:meta";
+
+/* ----- FONTS ----- */
+
+@font-face {
+  font-family: "League Spartan";
+  src: local("League Spartan Medium"), local("LeagueSpartan-Medium"),
+    url("../fonts/LeagueSpartan-Medium.woff2") format("woff2"),
+    url("../fonts/LeagueSpartan-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: local("League Spartan SemiBold"), local("LeagueSpartan-SemiBold"),
+    url("../fonts/LeagueSpartan-SemiBold.woff2") format("woff2"),
+    url("../fonts/LeagueSpartan-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: local("League Spartan Bold"), local("LeagueSpartan-Bold"),
+    url("../fonts/LeagueSpartan-Bold.woff2") format("woff2"),
+    url("../fonts/LeagueSpartan-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ----- VARIABLES ----- */
+
+$font-family: "League Spartan", sans-serif;
+
+/* ----- BREAKPOINTS ----- */
+
+/* 376px -> mobile images -> desktop images */
+/* 840px -> mobile menu + column layout -> full menu + row layout */
+
+/* Fluid typography and spacing */
+/* https://royalfig.github.io/fluid-typography-calculator/ */
+/* Min Viewport = 25rem / 400px */
+/* Max Viewport = 50rem / 800px */
+
+/* ----- CUSTOM PROPERTIES ----- */
+
+:root {
+  /* Colors */
+  --clr-white: hsl(0, 0%, 100%); /* White #FFFFFF */
+  --clr-black: hsl(0, 0%, 0%); /* Black #000000 */
+  --clr-dark-gray: hsl(0, 0%, 63%); /* Dark Gray #A0A0A0 */
+  --clr-very-dark-gray: hsl(0, 0%, 27%); /* Very Dark Gray #444444 */
+
+  /* Fonts */
+  --ff-body: #{meta.inspect($font-family)};
+
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-400: 0.75rem; /* 12px */
+}
+
+/* ----- END ----- */

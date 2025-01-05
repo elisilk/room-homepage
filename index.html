@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="preload" href="fonts/LeagueSpartan-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/LeagueSpartan-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/LeagueSpartan-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="./script.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <meta name="description" content="Solution to Frontend Mentor's Room homepage design challenge.">
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body>
+
+    <header class="[ header ]">
+      <div class="[ logo ]">
+        <span class="[ visually-hidden ]">Room furniture</span>
+        <img src="images/logo.svg" alt="Room logo" width="62" height="14">
+      </div>
+
+      <button id="nav-menu-control" class="[ nav-menu-control ]" aria-expanded="false" aria-controls="primary-nav" aria-haspopup="true">
+        <span class="[ visually-hidden ]">Open primary navigation menu</span>
+        <svg class="[ icon-hamburger ]" role="img" viewBox="0 0 20 14" width="20" height="14" aria-labelledby="icon-hamburger-title" xmlns="http://www.w3.org/2000/svg">
+          <title id="icon-hamburger-title">Open menu</title>
+          <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill-rule="evenodd"/>
+        </svg>
+        <svg class="[ icon-close ]" role="img" viewBox="0 0 16 16" width="16" height="16" aria-labelledby="icon-close-title" xmlns="http://www.w3.org/2000/svg">
+          <title id="icon-close-title">Close menu</title>
+          <path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+
+      <nav id="primary-nav" class="[ primary-nav ]" aria-label="primary navigation">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Shop</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="[ main ]">
+      <h1 class="[ visually-hidden ]">Room homepage</h1>
+
+      <section id="section-features" aria-labelledby="section-about-heading">
+        <h2 id="section-features-heading" class="[ visually-hidden ]">Why shop at Room?</h2>
+        <div class="[ slider ]">
+
+          <ul class="[ slides ]">
+            <li class="[ slide ]">
+              <picture class="[ slide__image ]">
+                <source type="image/webp" media="(min-width: 376px)" srcset="images/desktop-image-hero-1.webp" width="840" height="534"/>
+                <source type="image/jpeg" media="(min-width: 376px)" srcset="images/desktop-image-hero-1.jpg" width="840" height="534"/>
+                <source type="image/webp" srcset="images/mobile-image-hero-1.webp" width="375" height="360"/>
+                <img src="images/mobile-image-hero-1.jpg" alt="two white chairs at a table with a bonsai tree" width="375" height="360">
+              </picture>
+              <div class="[ slide__text ]">
+                <h3 class="[ slide__heading ]">Discover innovative ways to decorate</h3>
+                <p class="[ slide__description ]">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+                <a href="#" class="slide__link">Shop now <svg class="[ icon-arrow ]" role="img" viewBox="0 0 40 12" width="40" height="12" aria-labelledby="icon-arrow-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="icon-arrow-title">Arrow</title>
+                    <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="[ slide ]">
+              <picture class="[ slide__image ]">
+                <source type="image/webp" media="(min-width: 376px)" srcset="images/desktop-image-hero-2.webp" width="840" height="534"/>
+                <source type="image/jpeg" media="(min-width: 376px)" srcset="images/desktop-image-hero-2.jpg" width="840" height="534"/>
+                <source type="image/webp" srcset="images/mobile-image-hero-2.webp" width="375" height="360"/>
+                <img src="images/mobile-image-hero-2.jpg" alt="three differently-colored chairs" width="375" height="360">
+              </picture>
+              <div class="[ slide__text ]">
+                <h3 class="[ slide__heading ]">We are available all across the globe</h3>
+                <p class="[ slide__description ]">With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.</p>
+                <a href="#" class="slide__link">Shop now <svg class="[ icon-arrow ]" role="img" viewBox="0 0 40 12" width="40" height="12" aria-labelledby="icon-arrow-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="icon-arrow-title">Arrow</title>
+                    <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="[ slide ]">
+              <picture class="[ slide__image ]">
+                <source type="image/webp" media="(min-width: 376px)" srcset="images/desktop-image-hero-3.webp" width="840" height="534"/>
+                <source type="image/jpeg" media="(min-width: 376px)" srcset="images/desktop-image-hero-3.jpg" width="840" height="534"/>
+                <source type="image/webp" srcset="images/mobile-image-hero-3.webp" width="375" height="360"/>
+                <img src="images/mobile-image-hero-3.jpg" alt="a black folding chair" width="375" height="360">
+              </picture>
+              <div class="[ slide__text ]">
+                <h3 class="[ slide__heading ]">Manufactured with the best materials</h3>
+                <p class="[ slide__description ]">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.</p>
+                <a href="#" class="slide__link">Shop now <svg class="[ icon-arrow ]" role="img" viewBox="0 0 40 12" width="40" height="12" aria-labelledby="icon-arrow-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="icon-arrow-title">Arrow</title>
+                    <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="[ slider__controls ]">
+            <button id="slider-control-prev">
+              <svg class="[ icon-angle-left ]" role="img" viewBox="0 0 14 24" width="14" height="24" aria-labelledby="icon-angle-left-title" xmlns="http://www.w3.org/2000/svg">
+                <title id="icon-angle-left-title">Angle left</title>
+                <path d="M13 0L1 12l12 12" fill="none" fill-rule="evenodd"/>
+              </svg>
+            </button>
+            <button id="slider-control-next">
+              <svg class="[ icon-angle-right ]" role="img" viewBox="0 0 14 24" width="14" height="24" aria-labelledby="icon-angle-right-title" xmlns="http://www.w3.org/2000/svg">
+                <title id="icon-angle-left-title">Angle right</title>
+                <path d="M1 0l12 12L1 24" fill="none" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-about" class="[ about ]" aria-labelledby="section-about-heading">
+        <picture class="[ about__image ]">
+          <source type="image/webp" srcset="images/image-about-dark.webp"/>
+          <img src="images/image-about-dark.jpg" alt="furniture in a darkened room" width="420" height="266">
+        </picture>
+        <div class="about__text">
+          <h2 id="section-about-heading" class="[ section__heading ]">About our furniture</h2>
+          <p class="[ section__text ]">Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+        </div>
+        <picture class="[ about__image ]">
+          <source type="image/webp" srcset="images/image-about-light.webp"/>
+          <img src="images/image-about-light.jpg" alt="one chair in a brightly lit oversaturated room" width="440" height="266">
+        </picture>
+      </section>
+    </main>
+
+  </body>
+</html>
