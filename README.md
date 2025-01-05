@@ -57,12 +57,22 @@ Resources I used:
 - [Fluid typography and spacing](https://royalfig.github.io/fluid-typography-calculator/)
 - [transfonter](https://transfonter.org/) - to convert [Google Font of League Spartan](https://fonts.google.com/specimen/League+Spartan) into a woff2 compressed form.
 - [`cwebp` command-line tool](https://web.dev/articles/serve-images-webp) - to convert JPEG images to the more modern, compressed WebP format.
+- [Contrast Checker](https://webaim.org/resources/contrastchecker/) - The color constrast between the Dark Gray (#A0A0A0 / hsl(0, 0%, 63%)) text color (used in the main text areas) and the white background was not sufficient to pass the Web Content Accessibility Guidelines (WCAG). So I decided to go against the design and change the text color to the lightest gray color that does pass, which is #595959 / hsl(0,
+  0%,
+  35%).
+- PageSpeed Insights and Lighthouse Scores
+  - Current solution - [PageSpeed Insights Report from Jan 5, 2025, 1:41:52 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/zbvq0hpzy0)
+  - Initial solution - [PageSpeed Insights Report from Jan 5, 2025, 1:41:52 PM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-room-homepage/zbvq0hpzy0)
 
 So many cool 😎 things:
 
 ### Continued development
 
 Specific areas that the solution should be improved (known issues):
+
+- Prevent the slider from moving to a new slide when the tab button is pressed from one of the "Shop now" links to the next?
+- Hide the horizontal scrollbars on the slider?
+  - [Using CSS to hide scrollbars without impacting scrolling](https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/)
 
 More general ideas I want to consider:
 

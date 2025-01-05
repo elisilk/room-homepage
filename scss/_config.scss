@@ -54,7 +54,16 @@ $font-family: "League Spartan", sans-serif;
   /* Colors */
   --clr-white: hsl(0, 0%, 100%); /* White #FFFFFF */
   --clr-black: hsl(0, 0%, 0%); /* Black #000000 */
-  --clr-dark-gray: hsl(0, 0%, 63%); /* Dark Gray #A0A0A0 */
+  --clr-dark-gray: hsl(
+    0,
+    0%,
+    63%
+  ); /* Dark Gray #A0A0A0; from the original design */
+  --clr-dark-gray: hsl(
+    0,
+    0%,
+    35%
+  ); /* Dark Gray #595959; alternative to sufficiently contrast foregroud and background colors */
   --clr-very-dark-gray: hsl(0, 0%, 27%); /* Very Dark Gray #444444 */
 
   /* Fonts */
