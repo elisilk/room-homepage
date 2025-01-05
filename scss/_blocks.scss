@@ -9,7 +9,7 @@
 .header {
   position: fixed;
   z-index: 1;
-  height: 110px;
+  height: 140px; /* (m) 110px -> (d) 140px */
   width: min(100%, 1440px);
   left: 50%;
   transform: translateX(-50%);
@@ -67,6 +67,7 @@
 @media screen and (width <= 840px) {
   .header {
     justify-content: center;
+    height: 110px; /* (m) 110px -> (d) 140px */
     padding-inline: 1.5rem; /* (m) 24px -> (d) 64px */
   }
 
