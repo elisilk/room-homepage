@@ -1,8 +1,9 @@
 /* ----- UTILITIES ----- */
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   border: 0;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: auto;
   margin: 0;
   overflow: hidden;

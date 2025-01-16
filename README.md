@@ -77,6 +77,11 @@ So many cool 😎 things. Resources I used:
 Specific areas that the solution should be improved (known issues):
 
 - Fix issues raised by [@JosielLima's feedback on the solution](https://www.frontendmentor.io/solutions/homepage-with-lightweight-scrollable-slider-MNlW0cZQZK)
+  - References MDN page on the [`clip` property](https://developer.mozilla.org/en-US/docs/Web/CSS/clip), which is deprecated, and is used in my `.visually-hidden` class (not in my carousel implementation). What are alternative implementations of the `.visually-hidden` class?
+    - [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path) - Maybe just using `clip-path` as a first alternative (which is already true in a number of the `.visually-hidden` class implementations) and so `clip` is just a backup is all that is needed?
+    - [Inclusively Hidden by Scott O'Hara](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html)
+    - [Inclusively Hidden by Chris Coyier at CSS Tricks](https://css-tricks.com/inclusively-hidden/)
+    - [Hide content by Dave Rupert at The A11Y Project](https://www.a11yproject.com/posts/how-to-hide-content/)
   - Add animations/transitions between the slides
   - Consider an alternate solution approach to the carousel
 - Fix block spacing for the slide text of solution compared to the design. In the design the start spacing is less than the end spacing, both in the desktop and mobile views.
