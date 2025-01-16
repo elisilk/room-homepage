@@ -76,6 +76,12 @@ So many cool 😎 things. Resources I used:
 
 Specific areas that the solution should be improved (known issues):
 
+- Fix issues raised by [@JosielLima's feedback on the solution](https://www.frontendmentor.io/solutions/homepage-with-lightweight-scrollable-slider-MNlW0cZQZK)
+  - Add animations/transitions between the slides
+  - Consider an alternate solution approach to the carousel
+- Fix block spacing for the slide text of solution compared to the design. In the design the start spacing is less than the end spacing, both in the desktop and mobile views.
+- Hide the horizontal scrollbars on the slider.
+  - [Using CSS to hide scrollbars without impacting scrolling](https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/)
 - Prevent the slider from moving to a new slide when the tab button is pressed so the focus does not shift from one of the "Shop now" links to the next. A promising solution idea is to dynamically set `tabindex="-1"` for slides that are not visible in the current viewport.
   - [Control focus with tabindex](https://web.dev/articles/control-focus-with-tabindex)
   - [Can I dynamically set tabindex in JavaScript?](https://stackoverflow.com/questions/3772438/can-i-dynamically-set-tabindex-in-javascript)
@@ -83,8 +89,6 @@ Specific areas that the solution should be improved (known issues):
   - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
   - [The Intersection Observer API explained](https://pawelgrzybek.com/the-intersection-observer-api-explained/)
   - [How can I tell if a DOM element is visible in the current viewport?](https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport)
-- Hide the horizontal scrollbars on the slider.
-  - [Using CSS to hide scrollbars without impacting scrolling](https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/)
 
 More general ideas I want to consider:
 
