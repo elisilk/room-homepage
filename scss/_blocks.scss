@@ -25,7 +25,7 @@
   /* box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1); */
 }
 
-[aria-controls="primary-nav"] {
+[aria-controls='primary-nav'] {
   display: none;
 }
 
@@ -48,7 +48,7 @@
 
 .primary-nav a:hover::before,
 .primary-nav a:focus-visible::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 16px;
@@ -71,7 +71,7 @@
     padding-inline: 1.5rem; /* (m) 24px -> (d) 64px */
   }
 
-  [aria-controls="primary-nav"] {
+  [aria-controls='primary-nav'] {
     position: absolute;
     left: 1.5rem;
     z-index: 1;
@@ -92,7 +92,7 @@
 
   .primary-nav::before {
     z-index: -1;
-    content: "";
+    content: '';
     position: absolute;
     background-color: var(--clr-black);
     opacity: 0.5;
@@ -121,7 +121,7 @@
     display: none;
   }
 
-  [aria-controls="primary-nav"][aria-expanded="true"] {
+  [aria-controls='primary-nav'][aria-expanded='true'] {
     .icon-hamburger {
       display: none;
     }
@@ -131,7 +131,7 @@
     }
   }
 
-  [aria-controls="primary-nav"][aria-expanded="true"] + .primary-nav {
+  [aria-controls='primary-nav'][aria-expanded='true'] + .primary-nav {
     position: absolute;
     inset: 0;
     display: grid;
@@ -139,14 +139,14 @@
     justify-content: end;
   }
 
-  [aria-controls="primary-nav"]:hover,
-  [aria-controls="primary-nav"]:focus-visible {
+  [aria-controls='primary-nav']:hover,
+  [aria-controls='primary-nav']:focus-visible {
     outline: 2px dashed var(--clr-white);
     outline-offset: 6px;
   }
 
-  [aria-controls="primary-nav"][aria-expanded="true"]:hover,
-  [aria-controls="primary-nav"][aria-expanded="true"]:focus-visible {
+  [aria-controls='primary-nav'][aria-expanded='true']:hover,
+  [aria-controls='primary-nav'][aria-expanded='true']:focus-visible {
     outline: 2px dashed var(--clr-black);
   }
 }
@@ -159,6 +159,12 @@
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slides::-webkit-scrollbar {
+  display: none; /* Safari and Chrome layout support */
 }
 
 .slide {
