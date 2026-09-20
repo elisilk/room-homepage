@@ -76,18 +76,33 @@ const observer = new IntersectionObserver((entries) => {
 
 sliderSlides.forEach((slide) => observer.observe(slide));
 
-function getScrollDistance() {
-  const firstSlide = sliderSlides[0];
-  const individualSlideWidth = firstSlide.getBoundingClientRect().width;
-  const computedCssGap =
-    parseFloat(window.getComputedStyle(sliderList).gap) || 16;
-  return individualSlideWidth + computedCssGap;
+/* Slider Button Controls */
+
+function getActiveSlideIndex() {
+  const activeSlide = sliderSlides.find(
+    (slide) => !slide.hasAttribute('inert'),
+  );
+  return activeSlide ? sliderSlides.indexOf(activeSlide) : 0;
 }
 
 sliderNextBtn.addEventListener('click', () => {
-  sliderList.scrollBy({ left: getScrollDistance(), behavior: 'smooth' });
+  const currentIndex = getActiveSlideIndex();
+  if (currentIndex < sliderSlides.length - 1) {
+    sliderSlides[currentIndex + 1].scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
+  }
 });
 
 sliderPrevBtn.addEventListener('click', () => {
-  sliderList.scrollBy({ left: -getScrollDistance(), behavior: 'smooth' });
+  const currentIndex = getActiveSlideIndex();
+  if (currentIndex > 0) {
+    sliderSlides[currentIndex - 1].scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
+  }
 });
