@@ -2,7 +2,7 @@
 
 const header = document.querySelector('header');
 
-const handleWindowScroll = (e) => {
+function handleWindowScroll() {
   if (window.scrollY > 0) {
     if (!header.classList.contains('header__shadow'))
       header.classList.add('header__shadow');
@@ -10,7 +10,7 @@ const handleWindowScroll = (e) => {
     if (header.classList.contains('header__shadow'))
       header.classList.remove('header__shadow');
   }
-};
+}
 
 document.addEventListener('scroll', handleWindowScroll);
 
