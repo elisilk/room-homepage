@@ -2,6 +2,10 @@
 
 A responsive landing page built from a Frontend Mentor design, featuring a CSS-forward horizontal slider with native scrolling, scroll snapping, and JavaScript navigation controls.
 
+**[Live Site](https://elisilk.github.io/room-homepage/)** · **[Frontend Mentor Solution](https://www.frontendmentor.io/solutions/homepage-with-lightweight-scrollable-slider-MNlW0cZQZK)**
+
+![Room homepage desktop screenshot](./screenshots/screenshot-desktop.png)
+
 ## Overview
 
 This project is a responsive implementation of the [Frontend Mentor Room homepage challenge](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq).
@@ -28,11 +32,6 @@ The project uses a CUBE CSS-inspired organization to separate styles into distin
 |        Mobile designed at 375px:         | Desktop designed at 1440px:               |
 | :--------------------------------------: | ----------------------------------------- |
 | ![](./screenshots/screenshot-mobile.png) | ![](./screenshots/screenshot-desktop.png) |
-
-## Links
-
-- [Solution URL](https://github.com/elisilk/room-homepage)
-- [Live Site](https://elisilk.github.io/room-homepage/)
 
 ## Built With
 
