@@ -464,7 +464,6 @@ body {
 
 .slider__controls > button:disabled {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .slider__controls > button > svg {
