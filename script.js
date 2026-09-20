@@ -39,6 +39,8 @@ const sliderSlides = Array.from(sliderContainer.querySelectorAll('.slide'));
 const sliderPrevBtn = sliderContainer.querySelector('.slider-control-prev');
 const sliderNextBtn = sliderContainer.querySelector('.slider-control-next');
 const sliderStatus = sliderContainer.querySelector('.slider-status');
+const sliderTotalSlidesCount = sliderSlides.length;
+let sliderActiveSlideIndex = 0;
 
 const observerOptions = {
   root: sliderList,
@@ -50,10 +52,8 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.removeAttribute('inert');
 
-      const currentActiveIndex = sliderSlides.indexOf(entry.target);
-      const totalSlidesCount = sliderSlides.length;
-
-      sliderStatus.textContent = `Showing slide ${currentActiveIndex + 1} of ${totalSlidesCount}`;
+      sliderActiveSlideIndex = sliderSlides.indexOf(entry.target);
+      sliderStatus.textContent = `Showing slide ${sliderActiveSlideIndex + 1} of ${sliderTotalSlidesCount}`;
 
       if (entry.target.classList.contains('first-slide')) {
         sliderPrevBtn.disabled = true;
@@ -86,9 +86,8 @@ function getActiveSlideIndex() {
 }
 
 sliderNextBtn.addEventListener('click', () => {
-  const currentIndex = getActiveSlideIndex();
-  if (currentIndex < sliderSlides.length - 1) {
-    sliderSlides[currentIndex + 1].scrollIntoView({
+  if (sliderActiveSlideIndex < sliderSlides.length - 1) {
+    sliderSlides[sliderActiveSlideIndex + 1].scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
       inline: 'start',
@@ -97,9 +96,8 @@ sliderNextBtn.addEventListener('click', () => {
 });
 
 sliderPrevBtn.addEventListener('click', () => {
-  const currentIndex = getActiveSlideIndex();
-  if (currentIndex > 0) {
-    sliderSlides[currentIndex - 1].scrollIntoView({
+  if (sliderActiveSlideIndex > 0) {
+    sliderSlides[sliderActiveSlideIndex - 1].scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
       inline: 'start',
