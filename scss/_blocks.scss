@@ -301,6 +301,11 @@
   cursor: pointer;
 }
 
+.slider__controls > button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .slider__controls > button > svg {
   pointer-events: none;
   aspect-ratio: 1 / 2;
