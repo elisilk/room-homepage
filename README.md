@@ -112,5 +112,7 @@ Potential future improvements include:
 
 ## Author
 
-- [Frontend Mentor](https://www.frontendmentor.io/profile/elisilk)
+**Eli M. Silk**
+
 - [GitHub](https://github.com/elisilk)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/elisilk)
