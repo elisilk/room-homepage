@@ -1,34 +1,40 @@
 /* ----- CONFIG ----- */
 
-@use "sass:meta";
+@use 'sass:meta';
 
 /* ----- FONTS ----- */
 
 @font-face {
-  font-family: "League Spartan";
-  src: local("League Spartan Medium"), local("LeagueSpartan-Medium"),
-    url("../fonts/LeagueSpartan-Medium.woff2") format("woff2"),
-    url("../fonts/LeagueSpartan-Medium.woff") format("woff");
+  font-family: 'League Spartan';
+  src:
+    local('League Spartan Medium'),
+    local('LeagueSpartan-Medium'),
+    url('../fonts/LeagueSpartan-Medium.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "League Spartan";
-  src: local("League Spartan SemiBold"), local("LeagueSpartan-SemiBold"),
-    url("../fonts/LeagueSpartan-SemiBold.woff2") format("woff2"),
-    url("../fonts/LeagueSpartan-SemiBold.woff") format("woff");
+  font-family: 'League Spartan';
+  src:
+    local('League Spartan SemiBold'),
+    local('LeagueSpartan-SemiBold'),
+    url('../fonts/LeagueSpartan-SemiBold.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "League Spartan";
-  src: local("League Spartan Bold"), local("LeagueSpartan-Bold"),
-    url("../fonts/LeagueSpartan-Bold.woff2") format("woff2"),
-    url("../fonts/LeagueSpartan-Bold.woff") format("woff");
+  font-family: 'League Spartan';
+  src:
+    local('League Spartan Bold'),
+    local('LeagueSpartan-Bold'),
+    url('../fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -36,7 +42,7 @@
 
 /* ----- VARIABLES ----- */
 
-$font-family: "League Spartan", sans-serif;
+$font-family: 'League Spartan', sans-serif;
 
 /* ----- BREAKPOINTS ----- */
 
