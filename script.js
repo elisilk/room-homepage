@@ -78,13 +78,6 @@ sliderSlides.forEach((slide) => observer.observe(slide));
 
 /* Slider Button Controls */
 
-function getActiveSlideIndex() {
-  const activeSlide = sliderSlides.find(
-    (slide) => !slide.hasAttribute('inert'),
-  );
-  return activeSlide ? sliderSlides.indexOf(activeSlide) : 0;
-}
-
 sliderNextBtn.addEventListener('click', () => {
   if (sliderActiveSlideIndex < sliderSlides.length - 1) {
     sliderSlides[sliderActiveSlideIndex + 1].scrollIntoView({
